@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="464" viewBox="0 0 900 464" role="img" aria-labelledby="title desc">
+  <title id="title">One prediction, two places to run it</title>
+  <desc id="desc">A browser sends 7 and receives 15. Locally the server reads a file and writes to a terminal. On AWS, API Gateway routes to Lambda, which reads S3 with an IAM role and writes to CloudWatch Logs.</desc>
+  <defs>
+    <symbol id="folder" viewBox="0 0 48 48"><path d="M4 12h15l4 5h21v23H4z"/></symbol>
+    <symbol id="terminal" viewBox="0 0 48 48"><rect x="3" y="8" width="42" height="32" rx="3"/><path d="m10 17 7 6-7 6m12 1h11"/></symbol>
+    <symbol id="code" viewBox="0 0 48 48"><path d="m15 14-11 10 11 10m17-20 11 10-11 10m-5-26-7 32"/></symbol>
+    <symbol id="bucket" viewBox="0 0 48 48"><ellipse cx="24" cy="11" rx="18" ry="5"/><path d="m6 11 5 25c1 6 25 6 26 0l5-25"/></symbol>
+    <symbol id="logs" viewBox="0 0 48 48"><rect x="7" y="4" width="34" height="40" rx="3"/><path d="M14 15h20m-20 9h15m-15 9h19"/></symbol>
+  </defs>
+  <rect width="900" height="464" rx="12" fill="#fafbfd"/>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#172d3a">
+    <text x="30" y="42" font-size="29" font-weight="bold">One prediction, two places to run it</text>
+    <rect x="30" y="62" width="840" height="50" rx="5" fill="#e3ebf0"/>
+    <text x="52" y="94" font-size="20">Browser sends x = 7</text>
+    <text x="450" y="94" text-anchor="middle" font-size="20">y = 2x + 1</text>
+    <text x="848" y="94" text-anchor="end" font-size="20">Browser receives 15</text>
+    <rect x="30" y="130" width="403" height="305" rx="7" fill="#eaf3ef"/>
+    <rect x="467" y="130" width="403" height="305" rx="7" fill="#eaf0fa"/>
+    <text x="52" y="169" font-size="23" font-weight="bold">On your laptop</text>
+    <text x="489" y="169" font-size="23" font-weight="bold">In your AWS project</text>
+    <g fill="none" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+      <g stroke="#24694f"><use href="#code" x="54" y="197" width="42" height="42"/><use href="#folder" x="54" y="276" width="42" height="42"/><use href="#terminal" x="54" y="354" width="42" height="42"/></g>
+      <g stroke="#315c99"><use href="#code" x="490" y="197" width="42" height="42"/><use href="#bucket" x="490" y="276" width="42" height="42"/><use href="#logs" x="490" y="354" width="42" height="42"/></g>
+    </g>
+    <g font-size="20" font-weight="bold">
+      <text x="111" y="216">Python web server</text><text x="549" y="216">API Gateway + Lambda</text>
+      <text x="111" y="295">File on disk</text><text x="549" y="295">Private S3 object</text>
+      <text x="111" y="373">Terminal</text><text x="549" y="373">CloudWatch Logs</text>
+    </g>
+    <g font-size="16">
+      <text x="111" y="242">Routes the request and runs Python.</text><text x="549" y="242">Gateway routes; Lambda runs Python.</text>
+      <text x="111" y="321">Python opens model.json.</text><text x="549" y="321">Lambda's role allows the model read.</text>
+      <text x="111" y="399">Prints the request ID and result.</text><text x="549" y="399">Records the request ID and result.</text>
+    </g>
+  </g>
+</svg>

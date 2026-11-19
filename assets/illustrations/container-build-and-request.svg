@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="370" viewBox="0 0 900 370" role="img" aria-labelledby="title desc">
+<title id="title">Build time is not request time</title><desc id="desc">CodeBuild produces an S3 model and an ECR image. ECS runs the image. Browser requests pass through CloudFront and a load balancer to the running task. Logs go to CloudWatch.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1l9 4-9 4z" fill="#466577"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#172d3a}.title{font-size:28px;font-weight:bold}.label{font-size:20px;font-weight:bold}.small{font-size:16px}.line{stroke:#466577;stroke-width:2;fill:none;marker-end:url(#arrow)}</style>
+<rect width="900" height="370" rx="12" fill="#fafbfd"/>
+<text x="26" y="41" class="title">Build time is not request time</text>
+<rect x="22" y="62" width="856" height="118" rx="7" fill="#eaf3ef"/>
+<text x="40" y="93" class="label">1   When you build a release</text>
+<text x="44" y="143" class="label">CodeBuild: train + build</text>
+<path d="M277 136h53v-24h35" class="line"/>
+<path d="M330 136v20h35" class="line"/>
+<text x="382" y="118" class="small">S3 stores the model artifact</text>
+<text x="382" y="162" class="small">ECR stores the container image</text>
+<rect x="22" y="197" width="856" height="151" rx="7" fill="#eaf0fa"/>
+<text x="40" y="230" class="label">2   When someone submits a prediction</text>
+<text x="42" y="277" class="label">Browser</text>
+<path d="M129 270h47" class="line"/>
+<text x="185" y="277" class="label">CloudFront</text>
+<path d="M302 270h44" class="line"/>
+<text x="359" y="277" class="label">Load balancer</text>
+<path d="M507 270h44" class="line"/>
+<text x="566" y="277" class="label">Running ECS task</text>
+<text x="42" y="321" class="small">HTTPS</text>
+<text x="566" y="321" class="small">Writes logs to CloudWatch</text>
+<path d="M622 156h170v94h-82v8" class="line"/>
+<text x="690" y="148" class="small">ECS pulls image</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="318" viewBox="0 0 900 318" role="img" aria-labelledby="title desc">
+<title id="title">A public prediction, a private model</title><desc id="desc">The browser can submit a prediction but cannot read the model directly. Lambda uses its execution role to read model.json.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1l9 4-9 4z" fill="#466577"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#172d3a}.title{font-size:28px;font-weight:bold}.label{font-size:20px;font-weight:bold}.small{font-size:16px}.line{stroke:#466577;stroke-width:2;fill:none;marker-end:url(#arrow)}</style>
+<rect width="900" height="318" rx="12" fill="#fafbfd"/>
+<text x="26" y="41" class="title">A public prediction, a private model</text>
+<rect x="22" y="72" width="206" height="111" rx="7" fill="#eaf3ef"/>
+<rect x="264" y="72" width="231" height="111" rx="7" fill="#eaf0fa"/>
+<rect x="534" y="72" width="343" height="111" rx="7" fill="#f9efd9"/>
+<text x="40" y="110" class="label">Browser</text>
+<text x="40" y="143" class="small">Sends a number</text>
+<text x="281" y="110" class="label">API Gateway</text>
+<text x="281" y="143" class="small">Invokes the function</text>
+<text x="552" y="110" class="label">Lambda</text>
+<text x="552" y="143" class="small">Uses its own execution role</text>
+<path d="M228 126h31" class="line"/>
+<path d="M495 126h34" class="line"/>
+<rect x="534" y="226" width="343" height="66" rx="7" fill="#e3eeeb"/>
+<text x="552" y="267" class="label">Private S3 object: model.json</text>
+<path d="M720 183v37" class="line"/>
+<text x="733" y="211" class="small">GetObject</text>
+<path d="M115 183v76h335" stroke="#975139" fill="none" stroke-width="2" stroke-dasharray="6 6"/><circle cx="470" cy="259" r="12" fill="#975139"/><path d="M464 259h12" stroke="white" stroke-width="3"/>
+<text x="143" y="246" class="small">Direct anonymous read: denied</text>
+</svg>
